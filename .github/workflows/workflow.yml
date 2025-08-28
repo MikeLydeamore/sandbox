@@ -10,7 +10,7 @@ jobs:
   teleport:
     runs-on: ubuntu-latest
     steps:
-      - uses: MikeLydeamore/teleport-action@v1
+      - uses: MikeLydeamore/teleport@v1
         with:
           target_repo: "MikeLydeamore/sandbox"
           target_path: "test_target"
