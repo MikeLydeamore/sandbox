@@ -8,10 +8,11 @@ on:
 
 jobs:
   teleport:
-    uses: MikeLydeamore/teleport/.github/workflows/workflow.yml@main
-    with:
-      target_repo: "MikeLydeamore/sandbox"
-      target_path: "test_target"
-      source_path: "test"
-    secrets:
-      token: ${{ secrets.PERSONAL_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: MikeLydeamore/teleport-action@v1
+        with:
+          target_repo: "MikeLydeamore/sandbox"
+          target_path: "test_target"
+          source_path: "test"
+          token: ${{ secrets.PERSONAL_TOKEN }}  # fine-grained PAT: target Contents RW (+ source Read if private)
