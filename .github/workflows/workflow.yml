@@ -1,0 +1,15 @@
+name: Test workflow
+
+on:
+  push:
+   branches:
+    - main
+
+jobs:
+  job1:
+   uses: MikeLydeamore/teleport/.github/workflows/workflow.yml@122f938b1a3c3d990789967e34eeafa3036f0145
+   with:
+    target_repo: "MikeLydeamore/sandbox"
+    target_path: "test"
+    source_path: "test"
+    token: ${{ secrets.PERSONAL_TOKEN }}
