@@ -13,4 +13,5 @@ jobs:
     target_repo: "MikeLydeamore/sandbox"
     target_path: "test"
     source_path: "test"
+   secrets:
     token: ${{ secrets.PERSONAL_TOKEN }}
