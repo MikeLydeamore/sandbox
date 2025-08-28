@@ -13,5 +13,5 @@ jobs:
     target_repo: "MikeLydeamore/sandbox"
     target_path: "test_target"
     source_path: "test"
-   secrets:
     token: ${{ secrets.PERSONAL_TOKEN }}
+   secrets: inherit
